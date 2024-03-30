@@ -15,130 +15,132 @@ print("Three paths lie ahead")
 print("the left path is spiral stair case descending down.")
 print("the path in forward of you is a decrepit catacomb.")
 print("The last path on the right is a hallway... there seems to be a orange glow flickering at the end of it")
-print("Do you want to go left, Forward, Right")
+print("Do you want to go LEFT or RIGHT.")
 
 ### Prompt user for a choice
 
 path_choice =  input("> ")
 
-if(path_choice) == "left":
-    print("you descend deeper into the darkness")
-    print("you notice the creaking from wooden support beams from above")
+if (path_choice.lower().strip()) == "left":
+    print("You descend deeper into the darkness.")
+    print("You a creaking from the wooden support beams from above...")
     print("it proceeds to get louder...")
-    print("then out of nowhere the ceiling caves in crushing you underneath")
-    print("you are dead")
-    sys.exit()
-elif(path_choice) == "forward":
-    print("its too dark to see you feel with your hands")
-    print("you find a button made of stone on the wall ")
-    print("Do you want to press this button? yes or no")
-
-elif(path_choice) =="right":
-    print("You make your way towards the flickering light.")
-    print("as you get closer you begin to feel a heat sensation on your skin")
-    print("then you notice its a pool of lava!")
-    print("looking around you notice an out of place stone on the wall, it appears to be a button to activate something.")
-    print("Do you press the button? yes or no")
-
-button_choice2 = input("> ")
-
-if(button_choice2) == "yes":
-    print("nothing happens")
-    print("Type another command, yes or no.")
-elif(button_choice2) == "no":
-    print("you have no choice but to go back the way you came.")
-    print("walking back to the entrance you notice the path out has been opened")
-    print("you run as fast you can for the exit,")
-    print("not once looking back you make it outside.")
-    print("relieved that you lived through such an experience")
-    print("your first thought is heading to the tavern to get a tasty pint of mead!")
-    print("Thanks for playing!")
+    print("Then out of nowhere the ceiling caves in crushing you underneath.")
+    print("In a panic you try to claw your way out, unfortunately you end up suffocating under the rubble...")
+    print("You are dead.")
+    print("Thanks for playing! Try again for a different outcome.")
     sys.exit()
 
+elif (path_choice.lower().strip()) == "right":
+    print("It's too dark to see, you feel with your hands along the catacomb walls.")
+    print("Your hand sweeps across a stone that feels different from the rest...")
+    print("You found a button made of stone imbeded in the wall... ")
+    print("Do you want to press this button? YES or NO.")
+
+    button_choice = input("> ")
+    if (button_choice.lower().strip()) == "yes":
+        print("You activate a swinging axe trap. With no time to react,")
+        print("The axes come down swiftly and slice you in half.")
+        print("You are dead.")
+        print("Thanks for playing! Try again for a different outcome.")
+        sys.exit()
+    elif (button_choice.lower().strip()) == "no":
+        print("You slowly and gently remove your hand back from the button.")
+        print("You stumble further into the darkness of the ruins...")
+        print("You find yourself in a large room, an empty and foreboding aura fills you.")
+        print("With it being so dark in the ruins, you can't make out what's on the other side.")
+        print("As you get deeper in the room you feel that you're not alone, in the darkness you see a figure.")
+        print("It stands taller than you, not once moving or reacting to your presence.")
+        print("Do you approach the figure? YES or NO.")
+    else:
+        print("Invalid Command. Type yes or no")
+
+    figure_choice = input("> ")
+
+    if (figure_choice.lower().strip()) == "yes":
+        print("You approach the figure...")
+        print("It's just an old statue of a Gargoyle...")
+        print("You notice it's holding a golden goblet, it's covered in diamonds and valuable gems.")
+        print("Greed consumes you're thoughts and floods your mind as you approach the statue.")
+        print("You get closer to the Gargoyle, you begin reaching for the goblet...")
+        print("Suddenly! The Gargoyle spits acid in your face blinding you!")
+        print("In a panic you frantically run around trying to relieve the pain. You then fall and knock yourself unconscious.")
+        print("You awake in your bed! It was all just a nightmare... A horrid nightmare.")
+        print("Thanks for playing. Play again for a different Ending!")
+        sys.exit()
+
+    elif (figure_choice.lower().strip()) == "no":
+        print("In a hurry you frantically go back the way you came.")
+        print("While leaving you activate some sort of pressure plate trap.")
+        print("A stone wall then swivels open...")
+        print("Revealing an open Treasure chest with gold overfilling out of it.")
+        print("Do you TAKE the treasure or LEAVE the way you entered.")
+    else:
+        print("Invalid Command. Type yes or no")
+
+    treasure_choice = input("> ")
+
+    if (treasure_choice.lower().strip()) == "take":
+        print("You stuff you're pockets full of gold and gems.")
+        print("Your pockets start to over flow...")
+        print("The greed consumes you, a noise from behind approaches.")
+        print("You turn to confront the erie sound...")
+        print("Nothings there...")
+        print("Then suddenly the chest comes to life.")
+        print("Not having enough time to get away, the chest chomps your leg trapping you from escaping your fate.")
+        print("The chest then eats you whole in 3 massive bites...")
+        print("You are dead.")
+        print("Thanks for playing! Try again for a different outcome.")
+        sys.exit()
+
+    elif (treasure_choice.lower().strip()) == "leave":
+        print("You head back through the passage to where you first entered this nightmare.")
+        print("Shuffling back you discover something different about this path...")
+        print("You notice that the stone button from earlier is missing.")
+        print("As you come to what was the main entrance...")
+        print("Appears now to be entirely different room, resembling a Jail, or a Torture room...")
+        print("Skeletons by the dozens are strung up and down the walls of this room, Shackled from wrist to ankle.")
+        print("They tell a sinister tale of what really happened here, a Horrid nightmare now forgotten in these dark ruins.")
+        print("You courageousy brush off these sketchy thought's that clutter your mind, you decide to move deeper into the darkness.")
+        print("At the back of the room you notice a large chest possibly filled with riches.")
+        print("Off to the side of the chest is a Double door, its massive and appears heavy.")
+        print("Underneath both doors a crack of light slips through... could it be freedom? or another foolish trap...")
+        print("Do you OPEN the CHEST or go through the DOUBLE DOOR?")
+    else:
+        print("Invalid command. Type leave or take.")
+
+    path_choice3 = input("> ")
+
+    if (path_choice3.lower().strip()) == "open chest":
+        print("As you go to open the chest you hear rattling of bones... the dead skeletons are re-animating back to life!")
+        print("They swarm and beat you with their limbs in a slow painful bludgeoning of death.")
+        print("You are dead.")
+        print("Thanks for playing! Try again for a different outcome.")
+        sys.exit()
+
+    elif (path_choice3.lower().strip()) == "double door":
+        print("You forget about the chest and concentrate on getting out of this nightmare")
+        print("Pushing through the heavy wooden doors you hear faint noises...")
+        print("On the other side you hear yelling, laughter and the familiar smell of fine spirits and ale!")
+        print("As the doors swing open you realize you were underneath the old tavern the entire time.")
+        print("with a worried look on your face you seat yourself down quickly, utterly lost for words you recount what just happened.")
+        print("Trying to understand and make sense of it all the bartender asks 'What are drinking today, weary traveler..'")
+        print("You order a tall pint of ale. Relaxing and thinking back on what you just experienced,")
+        print("was it all just a dream? or a real life nightmare?")
+        print("After a few rounds of Ale you shrug it off as nightmarish dream.")
+        print("You then pay for your drinks and then proceed to the exit, confident and determined to find Riches and glory on the next adventure!")
+        print("While exiting the establishment you take notice to the name of the tavern")
+        print("A large sign looms over the building.")
+        print("It reads: 'The Dark Ruins-Tavern and Ale house' ")
+        print("The End.")
+        print("Thanks for playing my Texted Based RPG, this was my first project. Thanks again for playing!")
+    else:
+     print("invalid Command. Type open chest or double door.")
 else:
-    print("Invalid command")
+    print("Invalid Command. Type left or right.")
 
-button_choice = input("> ")
 
-if(button_choice) == "yes":
-    print("you activate a swinging axe trap that cuts you right in half")
-    print("you are dead")
-    sys.exit()
 
-elif(button_choice) == "no":
-    print("you slowly move your hand back from the button")
-    print("you stumble further through the dark")
-    print("you find yourself in a large room")
-    print("it being so dark you cant see the other side")
-    print("as you get to the opposite end of the room you see a dark figure")
-    print("do you approach the figure? yes or no")
-else:
-    print("Invalid command")
-
-figure_choice = input("> ")
-
-if(figure_choice) == "yes":
-    print("you approach the figure")
-    print("its just an old statue of a gargoyle")
-    print("but it seems to be holding a goblet")
-    print("do you take the goblet?")
-
-goblet_choice = input("> ")
-
-if(goblet_choice) == "yes":
-    print("acid spits from the gargoyles mouth blinding you")
-    print("blind and in a panic you fall over knocking yourself unconscious.")
-    print("you awake in your bed, it was all a dream.")
-    sys.exit()
-elif(figure_choice) == "no":
-    print("you frantically exit the room,")
-    print("while leaving you activate some sort of pressure plate")
-    print("a stone wall then swivels open revealing some treasure.")
-    print("Do you take the treasure or leave the way you entered ")
-else:
-    print("Invalid command ")
-treasure_choice = input("> ")
-
-if(treasure_choice) == "yes":
-    print("you stuff you're pockets full of gold and gems.")
-    print("Your pockets start to over flow")
-    print("as the greed consumes you, a noise from behind you approaches")
-    print("as you turn to confront this noise nothings there...")
-    print("then suddenly the chest comes to life and eats you whole in 3 chomps")
-    print("you are dead")
-    sys.exit()
-elif(treasure_choice) == "no":
-    print("you travel back through the hallway in which you came")
-    print("walking back you discover something different about the old path")
-    print("you notice that the stone button from earlier is missing")
-    print("as you come to what was the main entrance, is now a dungeon")
-    print("skeletons are strung up down the walls shackled from wrist to ankle")
-    print("at the back of the room you notice a chest and a double door")
-    print("Do you open the chest or go through the double doors?")
-else:
-    print("Invalid command ")
-
-path_choice3 = input("> ")
-
-if(path_choice3) == "open chest":
-    print("as you go to open the chest you hear the dead skeletons re-animate back to life")
-    print("they swarm, and kill you in a slow painful bludgeoning.")
-    print("you are dead")
-    sys.exit()
-elif(path_choice3) == "double doors":
-    print("you forget about the chest and concentrate on getting out")
-    print(" as you push through both doors")
-    print("on the other side you hear yelling and laughter and the smell of fine spirits and ale")
-    print("as the doors swing open you realize you were at the old tavern the entire time")
-    print("with a worried look on your face you seat yourself down")
-    print("you order a tall pint of ale and relax thinking back on what you just experienced")
-    print("was it all just a dream or a real life nightmare?")
-    print("well, after a few pints you shrug it off as a big dream")
-    print("you then proceed to the exit the tavern confident and determined to find fortune and glory on the next adventure.")
-    print("Thanks for playing my texted based RPG this was my first project. thanks again!")
-    sys.exit()
-else:
-    print("invalid command")
 
 
 
